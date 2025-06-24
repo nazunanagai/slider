@@ -8,6 +8,11 @@
       margin: 0;
       overflow: hidden;
     }
+    .slider-wrapper {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
     .slider {
       display: flex;
       width: 400%;
@@ -16,25 +21,24 @@
     .slider img {
       width: 100vw;
       height: auto;
+      flex-shrink: 0;
     }
     @keyframes slide {
-      0%   { transform: translateX(0%); }
-      25%  { transform: translateX(0%); }
-      30%  { transform: translateX(-100%); }
-      55%  { transform: translateX(-100%); }
-      60%  { transform: translateX(-200%); }
-      85%  { transform: translateX(-200%); }
-      90%  { transform: translateX(-300%); }
-      100% { transform: translateX(-300%); }
+      0%, 20%   { transform: translateX(0%); }
+      25%, 45%  { transform: translateX(-100%); }
+      50%, 70%  { transform: translateX(-200%); }
+      75%, 100% { transform: translateX(-300%); }
     }
   </style>
 </head>
 <body>
-  <div class="slider">
-    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_08763ab1-32c0-4d7c-bf24-838b0354ea44.png" />
-    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-560x952_v-fs_webp_c2913fab-d66c-4e9a-97fe-b159ec22fc65.png" />
-    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_97578b36-c64f-409f-9137-928788de4c36.png" />
-    <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-552x936_v-fs_webp_41fcf331-be35-42f9-9a1c-f52e5d96445a.png" />
+  <div class="slider-wrapper">
+    <div class="slider">
+      <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_08763ab1-32c0-4d7c-bf24-838b0354ea44.png" />
+      <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-560x952_v-fs_webp_c2913fab-d66c-4e9a-97fe-b159ec22fc65.png" />
+      <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_97578b36-c64f-409f-9137-928788de4c36.png" />
+      <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-552x936_v-fs_webp_41fcf331-be35-42f9-9a1c-f52e5d96445a.png" />
+    </div>
   </div>
 </body>
 </html>
