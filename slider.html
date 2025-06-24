@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .my-slider img {
+      width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="my-slider">
+    <div><img src="https://placehold.jp/300x180.png?text=診断1" /></div>
+    <div><img src="https://placehold.jp/300x180.png?text=診断2" /></div>
+    <div><img src="https://placehold.jp/300x180.png?text=診断3" /></div>
+    <div><img src="https://placehold.jp/300x180.png?text=診断4" /></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <script>
+    tns({
+      container: '.my-slider',
+      items: 3,
+      slideBy: 1,
+      autoplay: true,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      loop: true,
+      speed: 400,
+      gutter: 16,
+      responsive: {
+        768: { items: 3 },
+        375: { items: 3 }
+      }
+    });
+  </script>
+</body>
+</html>
+
