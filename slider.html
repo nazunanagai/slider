@@ -6,47 +6,45 @@
   <style>
     body {
       margin: 0;
-      overflow: hidden;
+      background-color: #d0f0c0; /* やさしいグリーン背景 */
     }
 
     .slider-container {
       width: 100vw;
       overflow: hidden;
+      background-color: #d0f0c0; /* 余白部分の背景もグリーンに */
+      padding: 16px 0; /* 上下の余白もすこし */
     }
 
     .slider {
       display: flex;
-      gap: 8px;
-      animation: scroll 10s linear infinite;
-
+      gap: 16px; /* 画像間の余白 */
+      animation: scroll 6s linear infinite; /* スピードUP!! */
     }
 
     .slider img {
-      width: calc((100vw - 16px) / 3); /* スマホで3枚表示 ＋ gap調整 */
+      width: calc((100vw - 48px) / 3); /* 余白ぶん調整済み */
       height: auto;
       flex-shrink: 0;
+      border-radius: 8px; /* お好みで角丸も！ */
     }
 
     @keyframes scroll {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
     }
   </style>
 </head>
 <body>
   <div class="slider-container">
     <div class="slider">
-      <!-- 画像4枚 × 2セット（＝8枚で無限ループ） -->
+      <!-- 4枚 × 2セット（無限ループ） -->
       <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_08763ab1-32c0-4d7c-bf24-838b0354ea44.png" />
       <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-560x952_v-fs_webp_c2913fab-d66c-4e9a-97fe-b159ec22fc65.png" />
       <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_97578b36-c64f-409f-9137-928788de4c36.png" />
       <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-552x936_v-fs_webp_41fcf331-be35-42f9-9a1c-f52e5d96445a.png" />
 
-      <!-- 同じ4枚をもう一度（ループ用） -->
+      <!-- もう1セット -->
       <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_08763ab1-32c0-4d7c-bf24-838b0354ea44.png" />
       <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-560x952_v-fs_webp_c2913fab-d66c-4e9a-97fe-b159ec22fc65.png" />
       <img src="https://storage.googleapis.com/studio-design-asset-files/projects/7kadkPD2q3/s-554x938_v-fs_webp_97578b36-c64f-409f-9137-928788de4c36.png" />
